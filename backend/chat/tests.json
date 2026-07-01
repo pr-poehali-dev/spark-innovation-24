@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "GET messages",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST text message",
+      "method": "POST",
+      "path": "/",
+      "body": "{\"author\": \"Тестер\", \"text\": \"Привет всем!\"}",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
