@@ -13,8 +13,8 @@ export const sections: Section[] = [
     ),
     content: 'Погрузись в живой ролевой мир. Строй карьеру, зарабатывай и стань частью истории сервера.',
     buttons: [
-      { text: 'Магазин', href: '#', color: 'red' },
-      { text: 'Купить админку / модерку', href: '#', color: 'blue' },
+      { text: 'Магазин', href: '/shop', color: 'red' },
+      { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
     ],
   },
   {
@@ -26,7 +26,7 @@ export const sections: Section[] = [
     ),
     content: 'Покупай и продавай игровые вещи, донат-предметы и уникальные привилегии. Всё для комфортной игры в одном месте.',
     buttons: [
-      { text: 'Перейти в магазин', href: '#', color: 'red' },
+      { text: 'Перейти в магазин', href: '/shop', color: 'red' },
     ],
   },
   {
@@ -38,7 +38,7 @@ export const sections: Section[] = [
     ),
     content: 'Хочешь больше возможностей? Купи админку или модерку и помогай развивать сервер, следи за порядком и получай уважение игроков.',
     buttons: [
-      { text: 'Купить админку / модерку', href: '#', color: 'blue' },
+      { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
     ],
   },
   {
@@ -59,8 +59,8 @@ export const sections: Section[] = [
     ),
     content: 'Твоя история начинается здесь. Присоединяйся к РП СТРАН и стань легендой сервера.',
     buttons: [
-      { text: 'Магазин', href: '#', color: 'red' },
-      { text: 'Купить админку / модерку', href: '#', color: 'blue' },
+      { text: 'Магазин', href: '/shop', color: 'red' },
+      { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
     ],
   },
 ]
