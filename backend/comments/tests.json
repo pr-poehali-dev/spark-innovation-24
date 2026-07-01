@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "GET comments",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST comment",
+      "method": "POST",
+      "path": "/",
+      "body": {"author": "Тестер", "text": "Отличный сервер!"},
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

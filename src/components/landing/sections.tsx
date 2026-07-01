@@ -15,6 +15,7 @@ export const sections: Section[] = [
     buttons: [
       { text: 'Магазин', href: '/shop', color: 'red' },
       { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
+      { text: 'IP сервера и чат', href: '/server', color: 'red' },
     ],
   },
   {
