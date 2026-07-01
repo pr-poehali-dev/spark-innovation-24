@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Icon from '@/components/ui/icon'
+import { useAuth } from '@/hooks/useAuth'
 
 const API_URL = 'https://functions.poehali.dev/5347ac9f-cd87-411b-8e28-8c15aa58c188'
 const NICK_KEY = 'rp_stran_chat_nick'
@@ -26,9 +27,10 @@ function formatDate(iso: string) {
 }
 
 export default function Chat() {
+  const { user } = useAuth()
   const [messages, setMessages] = useState<Message[]>([])
-  const [nick, setNick] = useState(() => localStorage.getItem(NICK_KEY) || '')
-  const [nickSet, setNickSet] = useState(() => !!localStorage.getItem(NICK_KEY))
+  const [nick, setNick] = useState(() => user?.nick || localStorage.getItem(NICK_KEY) || '')
+  const [nickSet, setNickSet] = useState(() => !!(user?.nick || localStorage.getItem(NICK_KEY)))
   const [nickInput, setNickInput] = useState('')
   const [text, setText] = useState('')
   const [image, setImage] = useState<string | null>(null)

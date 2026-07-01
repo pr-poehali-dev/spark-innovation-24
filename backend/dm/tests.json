@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "name": "Get unread",
+      "method": "GET",
+      "path": "/?action=unread&user_id=1",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get history",
+      "method": "GET",
+      "path": "/?action=history&from_user_id=1&to_user_id=2",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

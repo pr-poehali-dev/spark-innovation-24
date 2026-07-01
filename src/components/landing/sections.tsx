@@ -17,6 +17,7 @@ export const sections: Section[] = [
       { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
       { text: 'IP сервера и чат', href: '/server', color: 'red' },
       { text: 'Чат игроков', href: '/chat', color: 'blue' },
+      { text: 'Друзья и личка', href: '/friends', color: 'red' },
     ],
   },
   {
@@ -64,6 +65,7 @@ export const sections: Section[] = [
       { text: 'Магазин', href: '/shop', color: 'red' },
       { text: 'Купить админку / модерку', href: '/staff', color: 'blue' },
       { text: 'Чат игроков', href: '/chat', color: 'blue' },
+      { text: 'Друзья и личка', href: '/friends', color: 'red' },
     ],
   },
 ]

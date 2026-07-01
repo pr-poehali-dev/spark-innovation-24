@@ -1,0 +1,27 @@
+{
+  "tests": [
+    {
+      "name": "Register user",
+      "method": "POST",
+      "path": "/?action=register",
+      "body": "{\"nick\": \"TestPlayer99\", \"password\": \"1234\"}",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login user",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": "{\"nick\": \"TestPlayer99\", \"password\": \"1234\"}",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Search user",
+      "method": "GET",
+      "path": "/?action=search&nick=Test",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

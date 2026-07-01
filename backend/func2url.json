@@ -1,4 +1,7 @@
 {
+  "dm": "https://functions.poehali.dev/ac196711-e371-44a6-a820-58850bb99ed5",
+  "friends": "https://functions.poehali.dev/cbf89a6a-47ee-485a-9f7c-f3024c2b2ba3",
+  "auth": "https://functions.poehali.dev/b4b15c2b-9af3-420a-bac7-16449cc4d3a4",
   "chat": "https://functions.poehali.dev/5347ac9f-cd87-411b-8e28-8c15aa58c188",
   "comments": "https://functions.poehali.dev/ac71765e-10c4-4696-a2c4-c0676b837874"
 }
