@@ -13,8 +13,22 @@ interface Listing {
   image: string | null
 }
 
+const STORAGE_KEY = 'rp_stran_listings'
+
+function loadListings(): Listing[] {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+  } catch {
+    return []
+  }
+}
+
+function saveListings(listings: Listing[]) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(listings))
+}
+
 export default function Shop() {
-  const [listings, setListings] = useState<Listing[]>([])
+  const [listings, setListings] = useState<Listing[]>(loadListings)
   const [showForm, setShowForm] = useState(false)
   const [title, setTitle] = useState('')
   const [price, setPrice] = useState('')
@@ -32,13 +46,11 @@ export default function Shop() {
 
   const handleAdd = () => {
     if (!title.trim() || !price.trim()) return
-    setListings(prev => [{
-      id: Date.now(),
-      title,
-      price,
-      description,
-      image,
-    }, ...prev])
+    setListings(prev => {
+      const updated = [{ id: Date.now(), title, price, description, image }, ...prev]
+      saveListings(updated)
+      return updated
+    })
     setTitle('')
     setPrice('')
     setDescription('')
@@ -47,7 +59,11 @@ export default function Shop() {
   }
 
   const handleDelete = (id: number) => {
-    setListings(prev => prev.filter(l => l.id !== id))
+    setListings(prev => {
+      const updated = prev.filter(l => l.id !== id)
+      saveListings(updated)
+      return updated
+    })
   }
 
   return (
