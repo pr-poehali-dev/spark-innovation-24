@@ -7,7 +7,7 @@ const plans = [
     role: 'Модератор',
     color: 'blue',
     icon: 'Shield',
-    price: '199 ₽',
+    price: '299 ₽',
     period: '/ месяц',
     features: [
       'Бан и мут игроков',
@@ -20,7 +20,7 @@ const plans = [
     role: 'Администратор',
     color: 'red',
     icon: 'Star',
-    price: '399 ₽',
+    price: '599 ₽',
     period: '/ месяц',
     popular: true,
     features: [
@@ -35,7 +35,7 @@ const plans = [
     role: 'Старший Админ',
     color: 'blue',
     icon: 'Crown',
-    price: '699 ₽',
+    price: '899 ₽',
     period: '/ месяц',
     features: [
       'Все права администратора',
